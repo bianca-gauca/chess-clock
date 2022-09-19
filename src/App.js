@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Counter from './Counter/Counter';
 
 function App() {
+  const [counter1Disabled, setCounter1Disabled] = useState(true);
+  const [counter2Disabled, setCounter2Disabled] = useState(true);
+
+  const handleClickCounter1 = () => {
+    setCounter1Disabled(true);
+    setCounter2Disabled(false);
+  }
+
+  const handleClickCounter2 = () => {
+    setCounter1Disabled(false);
+    setCounter2Disabled(true);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Counter minutes={1} disabled={counter1Disabled} onClick={handleClickCounter1}></Counter>
+      
+      <Counter disabled={counter2Disabled} onClick={handleClickCounter2}></Counter>
     </div>
   );
 }
