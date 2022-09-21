@@ -1,0 +1,6 @@
+{
+  "appId": "com.funapps.chessclock",
+  "appName": "ChessClock",
+  "webDir": "build",
+  "bundledWebRuntime": false
+}
