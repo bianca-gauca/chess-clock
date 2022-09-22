@@ -33,7 +33,9 @@ export default function Counter({minutes = 15, disabled = false, onClick}) {
 
   return (
     <div className='counter' onClick={onClick}>
-      {min} : {sec}
+      <div className='min' > {min}</div> 
+      <div className='points'>:</div> 
+      <div className='sec'>{sec}</div>
     </div>
   );
 }
