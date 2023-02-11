@@ -1,0 +1,10 @@
+.counter1 {
+    width: 100%;
+    transform: rotate(180deg);
+}
+
+.counter2 {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
